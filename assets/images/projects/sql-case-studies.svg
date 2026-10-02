@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">SQL database analytics workflow</title>
+  <desc id="desc">SQL query fragments connect to a relational database and flow into a structured analytical result.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101920"/><stop offset=".55" stop-color="#0a1115"/><stop offset="1" stop-color="#111a17"/></linearGradient>
+    <linearGradient id="teal" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#67d6c5"/><stop offset="1" stop-color="#a9e9bb"/></linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#1b2a30" stop-opacity=".95"/><stop offset="1" stop-color="#10191e" stop-opacity=".9"/></linearGradient>
+    <radialGradient id="aura"><stop stop-color="#51c9b5" stop-opacity=".18"/><stop offset="1" stop-color="#51c9b5" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#b7ded7" stroke-opacity=".045"/></pattern>
+    <filter id="glow" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/><rect width="1200" height="675" fill="url(#grid)"/><circle cx="734" cy="331" r="310" fill="url(#aura)"/>
+  <text x="64" y="70" font-family="Arial,sans-serif" font-size="13" letter-spacing="3" fill="#7bd9c6">QUERY / RELATIONAL DATA / ANALYSIS</text>
+  <text x="64" y="109" font-family="Arial,sans-serif" font-size="24" font-weight="600" fill="#e2ece8">SQL query → database → insight</text>
+  <g transform="translate(64 174)">
+    <rect width="350" height="354" rx="11" fill="#0e171c" stroke="#83cfc3" stroke-opacity=".3"/>
+    <path d="M0 52h350" stroke="#b7ded7" stroke-opacity=".14"/><circle cx="22" cy="26" r="4" fill="#6bd4c1"/><text x="39" y="30" font-family="Arial,sans-serif" font-size="10" letter-spacing="2" fill="#a5b7b9">QUERY EDITOR</text>
+    <g font-family="monospace" font-size="14"><text x="24" y="100" fill="#6c7d83">01</text><text x="61" y="100" fill="#83dbca">SELECT</text><text x="124" y="100" fill="#d3e1dc">customer_id,</text><text x="61" y="127" fill="#d3e1dc">rental_history</text><text x="24" y="173" fill="#6c7d83">02</text><text x="61" y="173" fill="#83dbca">FROM</text><text x="105" y="173" fill="#d3e1dc">customer</text><text x="24" y="219" fill="#6c7d83">03</text><text x="61" y="219" fill="#83dbca">JOIN</text><text x="105" y="219" fill="#d3e1dc">rental</text><text x="24" y="265" fill="#6c7d83">04</text><text x="61" y="265" fill="#83dbca">ON</text><text x="90" y="265" fill="#d3e1dc">customer_id</text><text x="24" y="311" fill="#6c7d83">05</text><text x="61" y="311" fill="#83dbca">GROUP BY</text><text x="143" y="311" fill="#d3e1dc">customer</text></g>
+    <rect x="56" y="81" width="224" height="57" rx="5" fill="#56cbb8" fill-opacity=".06"/><rect x="56" y="154" width="192" height="27" rx="4" fill="#56cbb8" fill-opacity=".06"/><rect x="56" y="200" width="174" height="27" rx="4" fill="#56cbb8" fill-opacity=".06"/>
+  </g>
+  <g fill="none" stroke="url(#teal)" stroke-opacity=".54" stroke-width="1.5"><path d="M426 344h82m-10-9 10 9-10 9M785 344h82m-10-9 10 9-10 9"/></g>
+  <g transform="translate(527 193)">
+    <ellipse cx="126" cy="34" rx="126" ry="34" fill="#1b343a" stroke="#74d5c5" stroke-opacity=".68" stroke-width="2"/>
+    <path d="M0 34v208c0 19 56 35 126 35s126-16 126-35V34" fill="url(#glass)" stroke="#74d5c5" stroke-opacity=".55" stroke-width="2"/>
+    <path d="M0 99c0 19 56 35 126 35s126-16 126-35M0 168c0 19 56 35 126 35s126-16 126-35" fill="none" stroke="#74d5c5" stroke-opacity=".38" stroke-width="1.5"/>
+    <ellipse cx="126" cy="99" rx="126" ry="34" fill="#6bd4c1" fill-opacity=".035" stroke="#74d5c5" stroke-opacity=".32"/>
+    <ellipse cx="126" cy="168" rx="126" ry="34" fill="#6bd4c1" fill-opacity=".035" stroke="#74d5c5" stroke-opacity=".32"/>
+    <text x="126" y="326" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" letter-spacing="2" fill="#95b4b3">RELATIONAL DATABASE</text>
+    <g filter="url(#glow)" fill="#a8f0d8"><circle cx="126" cy="34" r="4"/><circle cx="61" cy="99" r="3"/><circle cx="194" cy="168" r="3"/><circle cx="126" cy="242" r="4"/></g>
+  </g>
+  <g transform="translate(883 226)">
+    <rect width="248" height="238" rx="10" fill="url(#glass)" stroke="#83cfc3" stroke-opacity=".34"/><text x="21" y="34" font-family="Arial,sans-serif" font-size="10" letter-spacing="2" fill="#a4baba">ANALYSIS RESULT</text>
+    <path d="M20 52h208" stroke="#b7ded7" stroke-opacity=".14"/>
+    <g fill="#d2e0dc" fill-opacity=".72"><rect x="21" y="76" width="206" height="22" rx="3"/><rect x="21" y="110" width="206" height="22" rx="3" fill-opacity=".22"/><rect x="21" y="144" width="206" height="22" rx="3"/><rect x="21" y="178" width="206" height="22" rx="3" fill-opacity=".22"/></g>
+    <g fill="#67d6c5"><circle cx="31" cy="87" r="3"/><circle cx="31" cy="121" r="3"/><circle cx="31" cy="155" r="3"/><circle cx="31" cy="189" r="3"/></g>
+    <g fill="#172720"><rect x="45" y="83" width="83" height="7" rx="3"/><rect x="142" y="83" width="68" height="7" rx="3"/><rect x="45" y="117" width="105" height="7" rx="3"/><rect x="163" y="117" width="47" height="7" rx="3"/><rect x="45" y="151" width="73" height="7" rx="3"/><rect x="132" y="151" width="78" height="7" rx="3"/><rect x="45" y="185" width="98" height="7" rx="3"/><rect x="157" y="185" width="53" height="7" rx="3"/></g>
+  </g>
+  <g font-family="Arial,sans-serif" font-size="10" letter-spacing="2" fill="#778f92"><text x="64" y="564">QUERY LOGIC</text><text x="574" y="564">TABLE RELATIONSHIPS</text><text x="923" y="502">STRUCTURED OUTPUT</text></g>
+  <path d="M64 608h1072" stroke="#b7ded7" stroke-opacity=".15"/><text x="64" y="638" font-family="Arial,sans-serif" font-size="11" letter-spacing="2" fill="#789094">SAKILA / QUERY / RELATIONSHIPS / INSIGHT</text><text x="1010" y="638" font-family="Arial,sans-serif" font-size="11" letter-spacing="2" fill="#789094">04 — SQL</text>
+</svg>

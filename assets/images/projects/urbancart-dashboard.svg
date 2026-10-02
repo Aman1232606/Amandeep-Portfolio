@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">UrbanCart business intelligence dashboard</title>
+  <desc id="desc">A dark glass dashboard composition with retail analytics panels, trend charts, category bars and an abstract geographic insight map.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111814"/><stop offset=".58" stop-color="#0b110e"/><stop offset="1" stop-color="#151b14"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#9bdc6c"/><stop offset="1" stop-color="#66cdbd"/></linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#1d2a22" stop-opacity=".95"/><stop offset="1" stop-color="#111a15" stop-opacity=".92"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#a6df70" stop-opacity=".17"/><stop offset="1" stop-color="#a6df70" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#d5edce" stroke-opacity=".045"/></pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity=".35"/></filter>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/><rect width="1200" height="675" fill="url(#grid)"/><circle cx="950" cy="245" r="360" fill="url(#glow)"/>
+  <text x="64" y="68" font-family="Arial,sans-serif" font-size="13" letter-spacing="3" fill="#b7e983">URBANCART / SUPERSTORE</text>
+  <text x="64" y="105" font-family="Arial,sans-serif" font-size="23" font-weight="600" fill="#edf1e9">Retail data / business intelligence</text>
+  <g filter="url(#shadow)" transform="translate(64 140)">
+    <rect width="1072" height="454" rx="14" fill="#0e1511" stroke="#b9dcb2" stroke-opacity=".22"/>
+    <path d="M0 56h1072" stroke="#d3e4d0" stroke-opacity=".12"/>
+    <circle cx="27" cy="28" r="4" fill="#b7e983"/><text x="44" y="32" font-family="Arial,sans-serif" font-size="11" letter-spacing="2" fill="#a8b8a7">OVERVIEW</text>
+    <g transform="translate(26 80)">
+      <g><rect width="235" height="92" rx="7" fill="url(#panel)" stroke="#b9dcb2" stroke-opacity=".17"/><text x="18" y="28" font-family="Arial,sans-serif" font-size="10" letter-spacing="1.5" fill="#93a493">SALES OVERVIEW</text><path d="M18 65h68" stroke="url(#accent)" stroke-width="5" stroke-linecap="round"/><path d="M102 65h105" stroke="#cfdecf" stroke-opacity=".12" stroke-width="4" stroke-linecap="round"/></g>
+      <g transform="translate(250)" ><rect width="235" height="92" rx="7" fill="url(#panel)" stroke="#b9dcb2" stroke-opacity=".17"/><text x="18" y="28" font-family="Arial,sans-serif" font-size="10" letter-spacing="1.5" fill="#93a493">ORDER MIX</text><path d="M18 65h52" stroke="#73cbbb" stroke-width="5" stroke-linecap="round"/><path d="M86 65h121" stroke="#cfdecf" stroke-opacity=".12" stroke-width="4" stroke-linecap="round"/></g>
+      <g transform="translate(500)"><rect width="235" height="92" rx="7" fill="url(#panel)" stroke="#b9dcb2" stroke-opacity=".17"/><text x="18" y="28" font-family="Arial,sans-serif" font-size="10" letter-spacing="1.5" fill="#93a493">CATEGORY TRENDS</text><path d="M18 65h91" stroke="#c8a7e9" stroke-width="5" stroke-linecap="round"/><path d="M124 65h83" stroke="#cfdecf" stroke-opacity=".12" stroke-width="4" stroke-linecap="round"/></g>
+      <g transform="translate(750)"><rect width="270" height="92" rx="7" fill="url(#panel)" stroke="#b9dcb2" stroke-opacity=".17"/><text x="18" y="28" font-family="Arial,sans-serif" font-size="10" letter-spacing="1.5" fill="#93a493">REGIONAL VIEW</text><g fill="#77cdb5" fill-opacity=".8"><circle cx="40" cy="62" r="4"/><circle cx="76" cy="53" r="6"/><circle cx="112" cy="70" r="3"/><circle cx="147" cy="49" r="5"/><circle cx="184" cy="65" r="4"/><circle cx="220" cy="50" r="6"/></g><path d="M40 62 76 53l36 17 35-21 37 16 36-15" fill="none" stroke="#77cdb5" stroke-opacity=".5"/></g>
+    </g>
+    <g transform="translate(26 192)">
+      <rect width="610" height="228" rx="8" fill="url(#panel)" stroke="#b9dcb2" stroke-opacity=".15"/><text x="20" y="30" font-family="Arial,sans-serif" font-size="10" letter-spacing="1.5" fill="#9cab9a">SALES / TREND EXPLORATION</text>
+      <g stroke="#d3e4d0" stroke-opacity=".1"><path d="M54 68h525M54 112h525M54 156h525M54 200h525"/><path d="M54 55v145M185 55v145M316 55v145M447 55v145M578 55v145"/></g>
+      <path d="M56 177c44-6 58-59 103-46s54 28 104 2 54-49 103-29 54 32 103-9 57-10 106-40" fill="none" stroke="url(#accent)" stroke-width="3" stroke-linecap="round"/>
+      <path d="M56 186c45 0 61-20 103-13s59-26 104-13 63-13 103-8 63-26 103-19 63-31 106-28" fill="none" stroke="#87a7bd" stroke-width="1.5" stroke-opacity=".65" stroke-dasharray="5 6"/>
+      <g fill="#c6ed92"><circle cx="159" cy="131" r="4"/><circle cx="263" cy="133" r="4"/><circle cx="366" cy="104" r="4"/><circle cx="469" cy="95" r="4"/><circle cx="575" cy="55" r="4"/></g>
+    </g>
+    <g transform="translate(654 192)">
+      <rect width="392" height="228" rx="8" fill="url(#panel)" stroke="#b9dcb2" stroke-opacity=".15"/><text x="20" y="30" font-family="Arial,sans-serif" font-size="10" letter-spacing="1.5" fill="#9cab9a">CATEGORY COMPOSITION</text>
+      <g font-family="Arial,sans-serif" font-size="10" fill="#aebbac"><text x="20" y="72">PRODUCT GROUP A</text><text x="20" y="113">PRODUCT GROUP B</text><text x="20" y="154">PRODUCT GROUP C</text><text x="20" y="195">PRODUCT GROUP D</text></g>
+      <g><rect x="150" y="60" width="206" height="8" rx="4" fill="#24322a"/><rect x="150" y="60" width="141" height="8" rx="4" fill="#a9df71"/><rect x="150" y="101" width="206" height="8" rx="4" fill="#24322a"/><rect x="150" y="101" width="177" height="8" rx="4" fill="#69cbbb"/><rect x="150" y="142" width="206" height="8" rx="4" fill="#24322a"/><rect x="150" y="142" width="96" height="8" rx="4" fill="#c2a2de"/><rect x="150" y="183" width="206" height="8" rx="4" fill="#24322a"/><rect x="150" y="183" width="122" height="8" rx="4" fill="#80a9bb"/></g>
+    </g>
+  </g>
+  <text x="64" y="634" font-family="Arial,sans-serif" font-size="11" letter-spacing="2" fill="#839284">INTERACTIVE REPORTING / CATEGORY &amp; REGIONAL PERSPECTIVES</text><text x="1017" y="634" font-family="Arial,sans-serif" font-size="11" letter-spacing="2" fill="#839284">03 — BI</text>
+</svg>

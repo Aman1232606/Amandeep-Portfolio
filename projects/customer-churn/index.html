@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Customer Churn Analysis — exploratory data analysis of a Telco customer churn dataset using Python, Pandas, Matplotlib and Seaborn.">
+  <meta name="theme-color" content="#0b0f14">
+  <title>Customer Churn Analysis | Aman Mehra</title>
+  <!-- Shared portfolio design system (read only), then page-specific styles -->
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../../index.html" aria-label="Aman Mehra — portfolio home">
+        <span class="logo-mark" aria-hidden="true">AM</span>
+        <span class="logo-text">Aman Mehra</span>
+      </a>
+      <a class="btn btn-outline btn-sm" href="../../index.html#projects">
+        <span aria-hidden="true">&larr;</span> Back to Portfolio
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== 1. Project hero ===== -->
+    <section class="hero case-hero" aria-labelledby="case-title">
+      <div class="container hero-inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="../../index.html">Portfolio</a></li>
+            <li><a href="../../index.html#projects">Projects</a></li>
+            <li aria-current="page">Customer Churn Analysis</li>
+          </ol>
+        </nav>
+        <p class="eyebrow">Case Study &bull; Exploratory Data Analysis</p>
+        <h1 class="hero-title case-title" id="case-title">Customer Churn Analysis</h1>
+        <p class="hero-headline">Exploratory Data Analysis of Telco Customer Churn</p>
+        <p class="hero-description">An analysis of customer churn patterns in a Telco customer dataset, exploring which customer characteristics and service factors are associated with retention and churn.</p>
+        <ul class="tag-list case-tags" aria-label="Technologies used">
+          <li class="tag">Python</li>
+          <li class="tag">Pandas</li>
+          <li class="tag">Matplotlib</li>
+          <li class="tag">Seaborn</li>
+          <li class="tag">Jupyter Notebook</li>
+          <li class="tag">Exploratory Data Analysis</li>
+        </ul>
+        <div class="btn-group">
+          <a class="btn btn-primary" href="https://github.com/Aman1232606/Telco-churn-EDA" target="_blank" rel="noopener">View GitHub Repository</a>
+          <a class="btn btn-secondary" href="../../index.html">Back to Portfolio</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 2. Overview + 3. Business problem ===== -->
+    <section class="section" id="overview" aria-labelledby="overview-title">
+      <div class="container">
+        <div class="split">
+          <div>
+            <header class="section-header">
+              <p class="section-label">01 / Overview</p>
+              <h2 class="section-title" id="overview-title">Project overview</h2>
+            </header>
+            <div class="prose">
+              <p>This project uses a Telco customer churn dataset to explore customer behaviour and identify patterns associated with churn.</p>
+              <p>The analysis covers data inspection, data cleaning, exploratory analysis and visualisation, carried out in Python within a Jupyter Notebook.</p>
+            </div>
+          </div>
+
+          <aside class="card question-card" aria-labelledby="problem-title">
+            <p class="section-label">02 / Business problem</p>
+            <h2 class="question-heading" id="problem-title">The business question</h2>
+            <blockquote class="question">
+              <p>Which customer characteristics and service factors are associated with higher customer churn?</p>
+            </blockquote>
+            <p class="muted">Losing customers is costly for subscription businesses. Understanding which groups churn more often helps decide where retention efforts and further investigation should be focused.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. Dataset ===== -->
+    <section class="section section-alt" id="dataset" aria-labelledby="dataset-title">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-label">03 / Dataset</p>
+          <h2 class="section-title" id="dataset-title">The dataset</h2>
+          <p class="section-intro">A Telco customer churn dataset containing customer-level service and account information, together with each customer&rsquo;s churn status.</p>
+        </header>
+
+        <ul class="field-grid" aria-label="Key fields used in the analysis">
+          <li class="field-card field-card-target">
+            <span class="field-name">Churn</span>
+            <span class="field-desc">Churn status &mdash; the target of the analysis</span>
+          </li>
+          <li class="field-card">
+            <span class="field-name">Contract</span>
+            <span class="field-desc">Contract type</span>
+          </li>
+          <li class="field-card">
+            <span class="field-name">InternetService</span>
+            <span class="field-desc">Internet service type</span>
+          </li>
+          <li class="field-card">
+            <span class="field-name">PaymentMethod</span>
+            <span class="field-desc">Payment method</span>
+          </li>
+          <li class="field-card">
+            <span class="field-name">tenure</span>
+            <span class="field-desc">Length of time as a customer (months)</span>
+          </li>
+          <li class="field-card">
+            <span class="field-name">MonthlyCharges</span>
+            <span class="field-desc">Monthly charge amount</span>
+          </li>
+          <li class="field-card">
+            <span class="field-name">TotalCharges</span>
+            <span class="field-desc">Total amount charged</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 5. Data cleaning ===== -->
+    <section class="section" id="cleaning" aria-labelledby="cleaning-title">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-label">04 / Data cleaning</p>
+          <h2 class="section-title" id="cleaning-title">Data inspection &amp; cleaning</h2>
+          <p class="section-intro">Before analysis, the data was inspected and the <code>TotalCharges</code> column was cleaned so it could be used as a numeric field.</p>
+        </header>
+
+        <div class="split split-even">
+          <ol class="step-list">
+            <li>
+              <h3 class="step-title">Inspected the data</h3>
+              <p>Reviewed the data shape, column names and data types.</p>
+            </li>
+            <li>
+              <h3 class="step-title">Checked data quality</h3>
+              <p>Checked for missing values and duplicate records.</p>
+            </li>
+            <li>
+              <h3 class="step-title">Cleaned <code>TotalCharges</code></h3>
+              <p>Stripped whitespace, converted invalid or empty values to missing values, and converted the column to numeric using coercion.</p>
+            </li>
+          </ol>
+
+          <figure class="code-card">
+            <figcaption class="code-caption">Cleaning approach (illustrative)</figcaption>
+            <pre><code><span class="c"># Inspect structure</span>
+df.shape
+df.info()
+
+<span class="c"># Check data quality</span>
+df.isnull().sum()
+df.duplicated().sum()
+
+<span class="c"># Clean TotalCharges</span>
+df[<span class="s">"TotalCharges"</span>] = df[<span class="s">"TotalCharges"</span>].str.strip()
+df[<span class="s">"TotalCharges"</span>] = df[<span class="s">"TotalCharges"</span>].replace(<span class="s">""</span>, np.nan)
+df[<span class="s">"TotalCharges"</span>] = pd.to_numeric(
+    df[<span class="s">"TotalCharges"</span>], errors=<span class="s">"coerce"</span>
+)</code></pre>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. Exploratory data analysis ===== -->
+    <section class="section section-alt" id="eda" aria-labelledby="eda-title">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-label">05 / Exploratory analysis</p>
+          <h2 class="section-title" id="eda-title">What was analysed</h2>
+          <p class="section-intro">Each analysis compares churned and retained customers across a single characteristic.</p>
+        </header>
+
+        <ol class="analysis-grid">
+          <li class="card analysis-card">
+            <span class="analysis-index" aria-hidden="true">01</span>
+            <h3 class="card-title">Overall churn distribution</h3>
+            <p>The proportion of customers who churned compared with those who stayed.</p>
+          </li>
+          <li class="card analysis-card">
+            <span class="analysis-index" aria-hidden="true">02</span>
+            <h3 class="card-title">Tenure vs churn</h3>
+            <p>How length of time as a customer differs between churned and retained customers.</p>
+          </li>
+          <li class="card analysis-card">
+            <span class="analysis-index" aria-hidden="true">03</span>
+            <h3 class="card-title">Monthly charges vs churn</h3>
+            <p>Whether monthly charges differ between churned and retained customers.</p>
+          </li>
+          <li class="card analysis-card">
+            <span class="analysis-index" aria-hidden="true">04</span>
+            <h3 class="card-title">Contract type vs churn</h3>
+            <p>Churn rates for month-to-month, one-year and two-year contracts.</p>
+          </li>
+          <li class="card analysis-card">
+            <span class="analysis-index" aria-hidden="true">05</span>
+            <h3 class="card-title">Internet service vs churn</h3>
+            <p>Churn rates for fiber optic, DSL and customers without internet service.</p>
+          </li>
+          <li class="card analysis-card">
+            <span class="analysis-index" aria-hidden="true">06</span>
+            <h3 class="card-title">Payment method vs churn</h3>
+            <p>Churn rates across electronic check, mailed check, bank transfer and credit card.</p>
+          </li>
+          <li class="card analysis-card">
+            <span class="analysis-index" aria-hidden="true">07</span>
+            <h3 class="card-title">Correlation matrix</h3>
+            <p>Relationships between the numeric variables in the dataset.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== 7. Key findings ===== -->
+    <section class="section" id="findings" aria-labelledby="findings-title">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-label">06 / Key findings</p>
+          <h2 class="section-title" id="findings-title">Key findings</h2>
+          <p class="section-intro">Patterns observed in this dataset, as documented in the project README. All values are approximate. They describe associations in this data &mdash; they are not causal conclusions or universal business rules.</p>
+        </header>
+
+        <div class="stat-grid">
+          <div class="card stat-card">
+            <p class="stat-label">Overall churn</p>
+            <p class="stat-value">~26%</p>
+            <p class="stat-note">of customers in the dataset churned</p>
+          </div>
+          <div class="card stat-card">
+            <p class="stat-label">Average tenure &mdash; churned</p>
+            <p class="stat-value">~18 <span class="stat-unit">months</span></p>
+            <p class="stat-note">lower than retained customers</p>
+          </div>
+          <div class="card stat-card">
+            <p class="stat-label">Average tenure &mdash; retained</p>
+            <p class="stat-value">~38 <span class="stat-unit">months</span></p>
+            <p class="stat-note">around twice that of churned customers</p>
+          </div>
+          <div class="card stat-card">
+            <p class="stat-label">Monthly charges</p>
+            <p class="stat-value stat-value-text">Higher</p>
+            <p class="stat-note">on average among churned customers</p>
+          </div>
+        </div>
+
+        <div class="chart-grid">
+          <figure class="card bar-chart">
+            <figcaption class="bar-chart-title">Churn rate by contract type</figcaption>
+            <ul class="bars">
+              <li class="bar-row" style="--value: 42">
+                <span class="bar-label">Month-to-month</span>
+                <span class="bar-track" aria-hidden="true"><span class="bar-fill"></span></span>
+                <span class="bar-value">~42%</span>
+              </li>
+              <li class="bar-row" style="--value: 11">
+                <span class="bar-label">One year</span>
+                <span class="bar-track" aria-hidden="true"><span class="bar-fill"></span></span>
+                <span class="bar-value">~11%</span>
+              </li>
+              <li class="bar-row" style="--value: 3">
+                <span class="bar-label">Two year</span>
+                <span class="bar-track" aria-hidden="true"><span class="bar-fill"></span></span>
+                <span class="bar-value">~3%</span>
+              </li>
+            </ul>
+          </figure>
+
+          <figure class="card bar-chart">
+            <figcaption class="bar-chart-title">Churn rate by internet service</figcaption>
+            <ul class="bars">
+              <li class="bar-row" style="--value: 42">
+                <span class="bar-label">Fiber optic</span>
+                <span class="bar-track" aria-hidden="true"><span class="bar-fill"></span></span>
+                <span class="bar-value">~42%</span>
+              </li>
+              <li class="bar-row" style="--value: 19">
+                <span class="bar-label">DSL</span>
+                <span class="bar-track" aria-hidden="true"><span class="bar-fill"></span></span>
+                <span class="bar-value">~19%</span>
+              </li>
+              <li class="bar-row" style="--value: 7">
+                <span class="bar-label">No internet service</span>
+                <span class="bar-track" aria-hidden="true"><span class="bar-fill"></span></span>
+                <span class="bar-value">~7%</span>
+              </li>
+            </ul>
+          </figure>
+
+          <figure class="card bar-chart">
+            <figcaption class="bar-chart-title">Churn rate by payment method</figcaption>
+            <ul class="bars">
+              <li class="bar-row" style="--value: 45">
+                <span class="bar-label">Electronic check</span>
+                <span class="bar-track" aria-hidden="true"><span class="bar-fill"></span></span>
+                <span class="bar-value">~45%</span>
+              </li>
+              <li class="bar-row" style="--value: 20">
+                <span class="bar-label">Mailed check</span>
+                <span class="bar-track" aria-hidden="true"><span class="bar-fill"></span></span>
+                <span class="bar-value">~20%</span>
+              </li>
+              <li class="bar-row" style="--value: 16">
+                <span class="bar-label">Bank transfer</span>
+                <span class="bar-track" aria-hidden="true"><span class="bar-fill"></span></span>
+                <span class="bar-value">~16%</span>
+              </li>
+              <li class="bar-row" style="--value: 11">
+                <span class="bar-label">Credit card</span>
+                <span class="bar-track" aria-hidden="true"><span class="bar-fill"></span></span>
+                <span class="bar-value">~11%</span>
+              </li>
+            </ul>
+          </figure>
+        </div>
+        <p class="chart-note">Bars are drawn on a 0&ndash;100% scale.</p>
+      </div>
+    </section>
+
+    <!-- ===== 8. Visualisations ===== -->
+    <section class="section section-alt" id="visualisations" aria-labelledby="visualisations-title">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-label">07 / Visualisations</p>
+          <h2 class="section-title" id="visualisations-title">Visualisations from the analysis</h2>
+          <p class="section-intro">Charts produced in the notebook. Full-size versions are available in the repository&rsquo;s <code>outputs</code> folder.</p>
+        </header>
+
+        <!--
+          To add each chart: download it from the repository's outputs/ folder, save it into
+          projects/customer-churn/images/ using the filename shown in the comment, then replace
+          the <div class="figure-placeholder"> with the <img> tag shown.
+        -->
+        <div class="figure-grid">
+          <figure class="card figure-card">
+            <!-- Source: https://github.com/Aman1232606/Telco-churn-EDA/blob/main/outputs/Customerchurn%20Distribution.png
+                 <img src="images/customer-churn-distribution.png" alt="Chart showing the distribution of churned and retained customers" loading="lazy"> -->
+            <div class="figure-placeholder" role="img" aria-label="Placeholder for the customer churn distribution chart">
+              <span>images/customer-churn-distribution.png</span>
+            </div>
+            <figcaption>Customer churn distribution</figcaption>
+          </figure>
+
+          <figure class="card figure-card">
+            <!-- Source: https://github.com/Aman1232606/Telco-churn-EDA/blob/main/outputs/Tenure%20vs%20Churn.png
+                 <img src="images/tenure-vs-churn.png" alt="Chart comparing tenure for churned and retained customers" loading="lazy"> -->
+            <div class="figure-placeholder" role="img" aria-label="Placeholder for the tenure vs churn chart">
+              <span>images/tenure-vs-churn.png</span>
+            </div>
+            <figcaption>Tenure vs churn</figcaption>
+          </figure>
+
+          <figure class="card figure-card">
+            <!-- Source: https://github.com/Aman1232606/Telco-churn-EDA/blob/main/outputs/Monthly%20Charges%20vs%20Churn.png
+                 <img src="images/monthly-charges-vs-churn.png" alt="Chart comparing monthly charges for churned and retained customers" loading="lazy"> -->
+            <div class="figure-placeholder" role="img" aria-label="Placeholder for the monthly charges vs churn chart">
+              <span>images/monthly-charges-vs-churn.png</span>
+            </div>
+            <figcaption>Monthly charges vs churn</figcaption>
+          </figure>
+
+          <figure class="card figure-card">
+            <!-- Source: https://github.com/Aman1232606/Telco-churn-EDA/blob/main/outputs/Churn%20by%20Contract%20Type.png
+                 <img src="images/churn-by-contract-type.png" alt="Chart showing churn by contract type" loading="lazy"> -->
+            <div class="figure-placeholder" role="img" aria-label="Placeholder for the churn by contract type chart">
+              <span>images/churn-by-contract-type.png</span>
+            </div>
+            <figcaption>Churn by contract type</figcaption>
+          </figure>
+
+          <figure class="card figure-card">
+            <!-- Source: https://github.com/Aman1232606/Telco-churn-EDA/blob/main/outputs/Churn%20by%20Internet%20Service%20Type.png
+                 <img src="images/churn-by-internet-service.png" alt="Chart showing churn by internet service type" loading="lazy"> -->
+            <div class="figure-placeholder" role="img" aria-label="Placeholder for the churn by internet service type chart">
+              <span>images/churn-by-internet-service.png</span>
+            </div>
+            <figcaption>Churn by internet service type</figcaption>
+          </figure>
+
+          <figure class="card figure-card">
+            <!-- Source: https://github.com/Aman1232606/Telco-churn-EDA/blob/main/outputs/Churn%20by%20Payment%20Method.png
+                 <img src="images/churn-by-payment-method.png" alt="Chart showing churn by payment method" loading="lazy"> -->
+            <div class="figure-placeholder" role="img" aria-label="Placeholder for the churn by payment method chart">
+              <span>images/churn-by-payment-method.png</span>
+            </div>
+            <figcaption>Churn by payment method</figcaption>
+          </figure>
+
+          <figure class="card figure-card figure-card-wide">
+            <!-- Source: https://github.com/Aman1232606/Telco-churn-EDA/blob/main/outputs/Correlation%20Matrix.png
+                 <img src="images/correlation-matrix.png" alt="Correlation matrix of the numeric variables in the dataset" loading="lazy"> -->
+            <div class="figure-placeholder" role="img" aria-label="Placeholder for the correlation matrix">
+              <span>images/correlation-matrix.png</span>
+            </div>
+            <figcaption>Correlation matrix</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 9. Business insights ===== -->
+    <section class="section" id="insights" aria-labelledby="insights-title">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-label">08 / Business insights</p>
+          <h2 class="section-title" id="insights-title">Interpreting the patterns</h2>
+          <p class="section-intro">What the observed patterns may indicate. These are associations found through exploratory analysis and suggest areas for further investigation &mdash; they do not show that any factor causes churn.</p>
+        </header>
+
+        <div class="insight-grid">
+          <article class="card insight-card">
+            <h3 class="card-title">Early tenure</h3>
+            <p>Churned customers have a much lower average tenure. This may indicate that customers in their early months would benefit from stronger onboarding and engagement.</p>
+          </article>
+          <article class="card insight-card">
+            <h3 class="card-title">Contract length</h3>
+            <p>Longer contracts are associated with lower churn in this dataset, with month-to-month customers showing the highest churn rate.</p>
+          </article>
+          <article class="card insight-card">
+            <h3 class="card-title">Fiber optic customers</h3>
+            <p>Higher churn is observed among fiber optic customers. This suggests an area for further investigation, such as service quality or pricing.</p>
+          </article>
+          <article class="card insight-card">
+            <h3 class="card-title">Electronic check payments</h3>
+            <p>Customers paying by electronic check show higher churn than those using automated methods such as bank transfer or credit card.</p>
+          </article>
+          <article class="card insight-card">
+            <h3 class="card-title">Monthly charges</h3>
+            <p>Higher monthly charges are associated with churn in the analysis. This may indicate price sensitivity, which would need further analysis to confirm.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 10. Recommendations ===== -->
+    <section class="section section-alt" id="recommendations" aria-labelledby="recommendations-title">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-label">09 / Recommendations</p>
+          <h2 class="section-title" id="recommendations-title">Recommendations</h2>
+          <p class="section-intro">Suggested next steps documented in the project, based on the observed patterns.</p>
+        </header>
+
+        <ol class="recommendation-list">
+          <li>Focus retention efforts on early-stage customers.</li>
+          <li>Promote longer-term contract options.</li>
+          <li>Investigate the fiber optic customer segment.</li>
+          <li>Encourage migration from electronic check towards automated payment methods.</li>
+          <li>Investigate service quality or pricing concerns in higher-churn segments.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== 11. Technical approach ===== -->
+    <section class="section" id="approach" aria-labelledby="approach-title">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-label">10 / Technical approach</p>
+          <h2 class="section-title" id="approach-title">Workflow</h2>
+        </header>
+
+        <ol class="workflow">
+          <li class="workflow-step"><span class="workflow-index" aria-hidden="true">1</span>Data Import</li>
+          <li class="workflow-step"><span class="workflow-index" aria-hidden="true">2</span>Data Inspection</li>
+          <li class="workflow-step"><span class="workflow-index" aria-hidden="true">3</span>Data Cleaning</li>
+          <li class="workflow-step"><span class="workflow-index" aria-hidden="true">4</span>Exploratory Analysis</li>
+          <li class="workflow-step"><span class="workflow-index" aria-hidden="true">5</span>Visualisation</li>
+          <li class="workflow-step"><span class="workflow-index" aria-hidden="true">6</span>Pattern Identification</li>
+          <li class="workflow-step"><span class="workflow-index" aria-hidden="true">7</span>Business Insights</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== 12. Tools & technologies ===== -->
+    <section class="section section-alt" id="tools" aria-labelledby="tools-title">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-label">11 / Tools</p>
+          <h2 class="section-title" id="tools-title">Tools &amp; technologies</h2>
+        </header>
+
+        <ul class="tool-grid">
+          <li class="card tool-card">
+            <span class="tool-name">Python</span>
+            <span class="tool-use">Analysis language</span>
+          </li>
+          <li class="card tool-card">
+            <span class="tool-name">Pandas</span>
+            <span class="tool-use">Data loading, cleaning and aggregation</span>
+          </li>
+          <li class="card tool-card">
+            <span class="tool-name">Matplotlib</span>
+            <span class="tool-use">Charting</span>
+          </li>
+          <li class="card tool-card">
+            <span class="tool-name">Seaborn</span>
+            <span class="tool-use">Statistical visualisation</span>
+          </li>
+          <li class="card tool-card">
+            <span class="tool-name">Jupyter Notebook</span>
+            <span class="tool-use">Analysis environment</span>
+          </li>
+          <li class="card tool-card">
+            <span class="tool-name">Exploratory Data Analysis</span>
+            <span class="tool-use">Analytical approach</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 13. Conclusion ===== -->
+    <section class="section" id="conclusion" aria-labelledby="conclusion-title">
+      <div class="container">
+        <div class="narrow">
+          <header class="section-header">
+            <p class="section-label">12 / Conclusion</p>
+            <h2 class="section-title" id="conclusion-title">Conclusion</h2>
+          </header>
+          <div class="prose">
+            <p>The analysis identified several customer segments and account characteristics associated with different churn rates, including tenure, contract type, internet service, payment method and monthly charges.</p>
+            <p>As an exploratory analysis, these findings describe patterns rather than causes. They provide a starting point for further investigation and for more detailed retention analysis.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 14. GitHub CTA ===== -->
+    <section class="section section-alt" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-panel">
+          <h2 class="section-title" id="cta-title">Explore the full analysis</h2>
+          <p class="section-intro">The notebook, code and charts are available on GitHub.</p>
+          <div class="btn-group">
+            <a class="btn btn-primary" href="https://github.com/Aman1232606/Telco-churn-EDA" target="_blank" rel="noopener">View GitHub Repository</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== 15. Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-name">Aman Mehra</p>
+      <p class="footer-copy">Customer Churn Analysis</p>
+      <ul class="footer-links">
+        <li><a href="../../index.html">Back to Portfolio</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

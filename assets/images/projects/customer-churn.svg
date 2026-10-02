@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Customer analytics and churn patterns</title>
+  <desc id="desc">A connected customer network flows into an abstract analysis dashboard with charts for exploring retention and churn patterns.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101a20"/><stop offset=".56" stop-color="#0b1217"/><stop offset="1" stop-color="#111914"/></linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1a2b32" stop-opacity=".92"/><stop offset="1" stop-color="#101a1e" stop-opacity=".76"/></linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#42c9d9"/><stop offset="1" stop-color="#a5f0e7"/></linearGradient>
+    <radialGradient id="halo"><stop stop-color="#3cc8d4" stop-opacity=".2"/><stop offset="1" stop-color="#3cc8d4" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#a7d3d0" stroke-opacity=".055"/></pattern>
+    <filter id="glow" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/><rect width="1200" height="675" fill="url(#grid)"/>
+  <circle cx="365" cy="335" r="290" fill="url(#halo)"/>
+  <path d="M0 550C260 465 340 595 590 510s386-36 610-154" fill="none" stroke="#63dce2" stroke-opacity=".08" stroke-width="2"/>
+  <g font-family="Arial,sans-serif" fill="#dce8e8">
+    <text x="64" y="70" font-size="14" letter-spacing="3" fill="#75d7dd">CUSTOMER SIGNALS / RETENTION STUDY</text>
+    <text x="64" y="111" font-size="24" font-weight="600">Customer data → analysis → insight</text>
+    <text x="64" y="143" font-size="13" letter-spacing="2" fill="#91a8ac">CONNECTED BEHAVIOUR / EXPLORATORY ANALYSIS</text>
+  </g>
+  <g fill="none" stroke="#5bbbc8" stroke-opacity=".45" stroke-width="1.5">
+    <path d="M135 275 225 210l92 62 69-99 99 67 80-61M135 275l77 112 105-53 69 64 99-68 80 66M225 210l-13 177m105-115 0 62m69-161 0 225m99-158 0 94m80-155 0 221M135 275l177-3 173 5 80 2M212 387l105-53 168-19 80 85"/>
+    <path d="M575 330h108" stroke="url(#cyan)" stroke-width="2" stroke-dasharray="5 8"/>
+  </g>
+  <g filter="url(#glow)">
+    <g fill="#9ce8e4"><circle cx="135" cy="275" r="5"/><circle cx="225" cy="210" r="4"/><circle cx="317" cy="272" r="6"/><circle cx="386" cy="173" r="5"/><circle cx="485" cy="240" r="4"/><circle cx="565" cy="179" r="5"/><circle cx="212" cy="387" r="4"/><circle cx="317" cy="334" r="5"/><circle cx="386" cy="398" r="4"/><circle cx="485" cy="303" r="6"/><circle cx="565" cy="369" r="4"/></g>
+    <circle cx="317" cy="272" r="13" fill="#59d3dc" fill-opacity=".22"/><circle cx="485" cy="303" r="15" fill="#59d3dc" fill-opacity=".19"/>
+  </g>
+  <g font-family="Arial,sans-serif" font-size="11" letter-spacing="2" fill="#82999d"><text x="110" y="445">CUSTOMER NETWORK</text><text x="604" y="310">SIGNAL</text></g>
+  <g transform="translate(700 190)">
+    <rect width="432" height="330" rx="12" fill="url(#panel)" stroke="#8bd9d8" stroke-opacity=".28"/>
+    <path d="M0 54h432" stroke="#b9e5e3" stroke-opacity=".12"/>
+    <circle cx="25" cy="27" r="4" fill="#6bd7db"/><text x="42" y="32" font-family="Arial,sans-serif" font-size="12" letter-spacing="2" fill="#b9cecf">SEGMENT PATTERNS</text>
+    <g stroke="#b9d6d3" stroke-opacity=".1"><path d="M56 105h335M56 155h335M56 205h335M56 255h335"/><path d="M56 88v190M139 88v190M222 88v190M305 88v190M388 88v190"/></g>
+    <g fill="none" stroke-linecap="round" stroke-width="3"><path d="M58 237c38-4 46-62 83-54s48-47 81-35 50-62 82-51 46-27 82-44" stroke="#5cc9d9"/><path d="M58 258c40 6 47-18 83-13s48-39 81-28 50-25 82-20 47-35 82-34" stroke="#c2ef73" stroke-opacity=".86"/></g>
+    <g fill="#76e2e4"><circle cx="141" cy="183" r="4"/><circle cx="222" cy="148" r="4"/><circle cx="304" cy="97" r="4"/><circle cx="386" cy="53" r="4"/></g>
+    <g transform="translate(57 286)" font-family="Arial,sans-serif" font-size="10" letter-spacing="1.5"><circle cx="4" cy="0" r="4" fill="#5cc9d9"/><text x="16" y="4" fill="#a6bbbc">RETENTION SIGNAL</text><circle cx="189" cy="0" r="4" fill="#c2ef73"/><text x="201" y="4" fill="#a6bbbc">CHURN PATTERN</text></g>
+  </g>
+  <g fill="#d8eeee" fill-opacity=".52"><circle cx="1050" cy="104" r="2"/><circle cx="1100" cy="560" r="2"/><circle cx="650" cy="106" r="1.5"/><circle cx="84" cy="535" r="2"/></g>
+  <path d="M64 608h1072" stroke="#b9e5e3" stroke-opacity=".16"/><text x="64" y="638" font-family="Arial,sans-serif" font-size="11" letter-spacing="2" fill="#789094">PATTERNS IN DATA / NOT CAUSAL CLAIMS</text><text x="1004" y="638" font-family="Arial,sans-serif" font-size="11" letter-spacing="2" fill="#789094">01 — ANALYTICS</text>
+</svg>
